@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Product A",
+    "price": 50.99,
+    "stock": 100,
+    "country": "USA",
+    "rate": 4.5,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product B",
+    "price": 35.75,
+    "stock": 75,
+    "country": "Canada",
+    "rate": 3.8,
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product C",
+    "price": 120.25,
+    "stock": 50,
+    "country": "Germany",
+    "rate": 4.2,
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product D",
+    "price": 89.99,
+    "stock": 120,
+    "country": "France",
+    "rate": 4.0,
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product E",
+    "price": 65.5,
+    "stock": 90,
+    "country": "Japan",
+    "rate": 4.7,
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product F",
+    "price": 42.8,
+    "stock": 80,
+    "country": "Australia",
+    "rate": 3.5,
+    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product G",
+    "price": 99.5,
+    "stock": 60,
+    "country": "United Kingdom",
+    "rate": 4.8,
+    "description": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product H",
+    "price": 75.25,
+    "stock": 110,
+    "country": "Spain",
+    "rate": 4.3,
+    "description": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product I",
+    "price": 55.0,
+    "stock": 70,
+    "country": "Brazil",
+    "rate": 4.6,
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  },
+  {
+    "name": "Product J",
+    "price": 30.45,
+    "stock": 95,
+    "country": "South Korea",
+    "rate": 3.9,
+    "description": "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    "image": "https://source.unsplash.com/300x200/?product"
+  }
+]
