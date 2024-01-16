@@ -348,5 +348,5 @@ console.log(findAngka);
 // 10. Fill
 // memodifikasi array dengan aturan array.fill(value, start, end);
 var angka2 = [1, 2, 20, 40, 4, 5, 6, 7, 1];
-const fillAngka = angka2.fill(9);
+const fillAngka = angka2.fill(9, 1, 3);
 console.log(fillAngka);

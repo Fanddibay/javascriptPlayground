@@ -119,65 +119,225 @@
 
 */
 
-function angkot(sopir, trayek, kas, penumpang) {
-  this.sopir = sopir;
-  this.trayek = trayek;
-  this.kas = kas;
-  this.penumpang = penumpang;
+// function angkot(sopir, trayek, kas, penumpang) {
+//   this.sopir = sopir;
+//   this.trayek = trayek;
+//   this.kas = kas;
+//   this.penumpang = penumpang;
 
-  this.addPenumpang = function (account) {
-    if (this.penumpang.length == 0) {
-      this.penumpang.push(account);
-      return this.penumpang;
-    } else {
-      for (let i = 0; i < this.penumpang.length; i++) {
-        if (this.penumpang[i] == account) {
-          alert(account + " sudah ada data tersebut");
-          return this.penumpang;
-        } else if (i == this.penumpang.length - 1) {
-          this.penumpang.push(account);
-          return this.penumpang;
-        } else if (this.penumpang[i] == undefined) {
-          this.penumpang[i] = account;
-          return this.penumpang;
-        }
-      }
+//   this.addPenumpang = function (account) {
+//     if (this.penumpang.length == 0) {
+//       this.penumpang.push(account);
+//       return this.penumpang;
+//     } else {
+//       for (let i = 0; i < this.penumpang.length; i++) {
+//         if (this.penumpang[i] == account) {
+//           alert(account + " sudah ada data tersebut");
+//           return this.penumpang;
+//         } else if (i == this.penumpang.length - 1) {
+//           this.penumpang.push(account);
+//           return this.penumpang;
+//         } else if (this.penumpang[i] == undefined) {
+//           this.penumpang[i] = account;
+//           return this.penumpang;
+//         }
+//       }
+//     }
+//   };
+
+//   this.deletePenumpang = function (account, pay) {
+//     if (this.penumpang.length == 0) {
+//       alert("data masih kosong!");
+//       return this.penumpang;
+//     } else {
+//       for (let i = 0; i < this.penumpang.length; i++) {
+//         if (this.penumpang[i] == account) {
+//           this.penumpang[i] = undefined;
+//           this.kas += pay;
+//         } else if (i == this.penumpang.length - 1) {
+//           alert(account + " tidak ada dalam data");
+//         }
+//         return this.penumpang;
+//       }
+//     }
+//   };
+// }
+
+// let angkot1 = new angkot("Fandi", ["Jakarta", "Surabaya"], 0, []);
+// console.log(angkot1);
+
+// function ticketDepature(name, price, takeoff, passenger) {
+//   this.name = name;
+//   this.price = price;
+//   this.takeoff = takeoff;
+//   this.passenger = passenger;
+
+//   this.addPassenger = function (addData) {
+//     if (this.passenger.length == 0) {
+//       this.passenger.push(addData);
+//       return this.passenger;
+//     } else {
+//       // lopping isi dalam data passenger
+//       for (let i = 0; i < passenger.length; i++) {
+//         // apabila sudah ada nama yang sama
+//         if (this.passenger[i] == addData) {
+//           alert(addData + " sudah ada dalam data");
+//           return this.passenger;
+//         } else if (i == this.passenger.length - 1) {
+//           this.passenger.push(addData);
+//           return this.passenger;
+//         } else if (this.passenger[i] == undefined) {
+//           this.passenger[i] = addData;
+//           return this.passenger;
+//         }
+//       }
+//     }
+//   };
+
+//   this.deletePassenger = function (addData, pay) {
+//     // validasi apakah data nya kosong apa tidak
+//     if (this.passenger.length == 0) {
+//       alert("data masih kosong!");
+//       return this.passenger;
+//     } else {
+//       // loping data
+//       for (let i = 0; i < this.passenger.length; i++) {
+//         // menghapus data
+//         if (this.passenger[i] == addData) {
+//           this.passenger[i] = undefined;
+//           this.price += pay;
+//           return this.passenger;
+//         } else if (i == this.passenger.length - 1) {
+//           this.passenger.push(addData);
+//           return this.passenger;
+//         }
+//       }
+//     }
+//   };
+// }
+
+// let depature = new ticketDepature("Lion airlanes", 0, ["12.00", "15.00"], []);
+// console.log(depature);
+
+// // * = dipakai untuk merrubah suatu data dari kiri ke kanan, sedangkan == / === membandingkan atau expression suaatu data
+
+// // function
+// function rails(name, price, passenger) {
+//   this.name = name;
+//   this.price = price;
+//   this.passenger = passenger;
+
+//   this.addDataPassemger = function (addNew) {
+//     if (this.passenger.length == 0) {
+//       this.passenger.push(addNew);
+//       return this.passenger;
+//     } else {
+//       for (let i = 0; i < this.passenger.length; i++) {
+//         if (this.passenger[i] == addNew) {
+//           alert(addNew + " sudah ada dalam data");
+//           return this.passenger;
+//         } else if (this.passenger.length == undefined) {
+//           this.passenger[i] = addNew;
+//           return this.passenger;
+//         } else if (i == this.passenger.length - 1) {
+//           this.passenger.push(addNew);
+//           return this.passenger;
+//         }
+//       }
+//     }
+//   };
+// }
+
+// let railWay = new rails("Bengawan", 0, []);
+// console.log(railWay);
+
+// revisited object
+
+// literal object
+// tidak efektif untuk object yang banyak
+let mahasiswa = {
+  nama: "fandi bayu",
+  semester: 12,
+  jurusan: "saintek",
+  alamat: "jakarta",
+  ip: 4.1,
+  nilai: function (nilai) {
+    this.ip += nilai;
+    alert(`${this.ip}`);
+  },
+};
+// function declaration
+// melakukan
+const murid = function (nama, kelas, jurusan, alamat, rapot) {
+  // pada function declaration kita membuat terlebih dahulu variabel penampung untuk nilai yang akan ditentukan
+  let profile = {};
+  profile.nama = nama;
+  profile.kelas = kelas;
+  profile.jurusan = jurusan;
+  profile.alamt = alamat;
+  profile.rapot = rapot;
+  profile.nilai = function (rate) {
+    profile.rapot += rate;
+    alert(`nilai terbaru kamu sebesar ${rapot}`);
+  };
+
+  return profile;
+};
+
+const nilaiMurid1 = murid("fandi", 12, "IPA", "pondok aren", 91);
+
+// function constructor
+
+const siswa = function (nama, kelas, jurusan, alamat, rapot) {
+  this.nama = nama;
+  this.kelas = kelas;
+  this.jurusan = jurusan;
+  this.alamat = alamat;
+  this.rapot = rapot;
+  this.nilai = function (tambah) {
+    this.rapot = this.rapot + tambah;
+    alert(`nilai kamu ${nama}, menjadi ${rapot}`);
+  };
+
+  this.min = function (nilai) {
+    this.rapot -= nilai;
+    alert(`nilai kamu ${rapot}`);
+  };
+};
+
+const nilaiSiswa = new siswa("Fandi", 12, "IPA", "Pondok Aren", 91);
+
+// object create
+/*
+  ! cara membuat object dengan mudah
+  * jadi object.create itu membuat variabel methode yang terpisah dari object agar meminimalisir penyimpanan dan tidak memanggil berulang ulang
+*/
+
+const objectPayment = {
+  payment: function (payments) {
+    if (!Array.isArray(this.pay)) {
+      this.pay = [];
     }
-  };
+    this.pay.push(payments);
+    alert(`${this.pay}`);
+  },
 
-  this.deletePenumpang = function (account, pay) {
-    if (this.penumpang.length == 0) {
-      alert("data masih kosong!");
-      return this.penumpang;
-    } else {
-      for (let i = 0; i < this.penumpang.length; i++) {
-        if (this.penumpang[i] == account) {
-          this.penumpang[i] = undefined;
-          this.kas += pay;
-        } else if (i == this.penumpang.length - 1) {
-          alert(account + " tidak ada dalam data");
-        }
-        return this.penumpang;
-      }
-    }
-  };
-}
+  totals: function () {
+    this.total = "";
+    this.total += this.pay;
+    alert(`${this.total}`);
+  },
+};
 
-let angkot1 = new angkot("Fandi", ["Jakarta", "Surabaya"], 0, []);
-console.log(angkot1);
+const paymentGateway = function (name, pay, schedule, total) {
+  let payment = Object.create(objectPayment);
 
-function ticketDepature(name, price, takeoff, passenger) {
-  this.name = name;
-  this.price = price;
-  this.takeoff = takeoff;
-  this.passenger = passenger;
+  payment.name = name;
+  payment.pay = `IDR ${pay}`;
+  payment.schedule = schedule;
+  payment.total = total;
 
-  this.addPrice = function (account, pay) {
-    this.passenger.push(account);
-    this.price += pay;
-    return this.passenger;
-  };
-}
+  return payment;
+};
 
-let depature = new ticketDepature("Lion airlanes", 0, ["12.00", "15.00"], []);
-console.log(depature);
+const paymentId = paymentGateway("Fandi", 49000, "19-10-2023");

@@ -228,6 +228,20 @@ function tambah() {
 const hasil = tambah(3, 5, 1, 2, 3, 5);
 console.log(hasil);
 
+function even() {
+  // membuat element untuk digunakan
+  let element = 0;
+  // melakukan looping nilai
+  for (let i = 0; i < arguments.length; i++) {
+    // memasukan looping nilai kedalam element yang akan di panggil
+    element -= arguments[i];
+  }
+  // memanggil element yang sudah di lakukan perloopingan
+  return element;
+}
+
+const result = even(10, 1, 4, 2);
+console.log(result);
 // refactoring adalah sebuah proses yang merubah kode menjadi lebih baik tanpa merrubah functionalitasnya.
 /*
   * refactoring berfungsi untuk pertama 
@@ -280,7 +294,7 @@ cetakAngka(10);
 
 function faktorial(n) {
   if (n == 0) return 1;
-  return n ** 2;
+  return n ** 3;
 }
 
 console.log(faktorial(5));
@@ -317,13 +331,13 @@ console.log(faktorial(5));
 */
 
 // Function Declaration
-tampilPesan("Fandi Bayu");
-function tampilPesan(name) {
-  alert("Halo" + name);
-}
+// tampilPesan("Fandi Bayu");
+// function tampilPesan(name) {
+//   alert("Halo" + name);
+// }
 
-// Function Ekspession
-const tammpilPesan = function tampilPesan(name) {
-  alert("Halo" + name);
-};
-tampilPesan("Fandi Bayu");
+// // Function Ekspession
+// const tammpilPesan = function tampilPesan(name) {
+//   alert("Halo" + name);
+// };
+// tampilPesan("Fandi Bayu");
